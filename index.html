@@ -22,10 +22,10 @@
   button.primary{background:#fff;color:#1f2328}
   button.secondary{background:#3a4148;color:#fff}
   .help{font-size:12px;opacity:.8;margin-left:auto}
-  .wrap{padding:14px}
+  .wrap{padding:44px 14px 14px}
   #room{
     position:relative;margin:auto;background:white;border:18px solid var(--wall);
-    width:min(96vw,1550px);aspect-ratio:31/17;overflow:hidden;
+    width:min(96vw,1550px);aspect-ratio:31/17;overflow:visible;
     box-shadow:0 4px 24px rgba(0,0,0,.15);
   }
   .label{position:absolute;font-weight:700;font-size:14px;pointer-events:none}
@@ -47,12 +47,17 @@
       linear-gradient(transparent 0 43%, rgba(70,40,20,.6) 43% 44%, transparent 44% 100%);
     opacity:.9;
   }
-  .closet{
-    right:1.2%; top:.8%; width:14%; height:14%; background:#f7f7f7;
-    border:2px solid #444;
+  .closet-door{
+    position:absolute;right:3.5%;top:-18px;width:9.7%;height:18px;
+    background:white;border-left:2px solid var(--wall);border-right:2px solid var(--wall);
+    border-bottom:2px solid #777;z-index:5;pointer-events:none;
   }
-  .closet:after{
-    content:"Closet"; position:absolute; inset:0; display:grid; place-items:center; font-weight:700;
+  .closet-door::before{
+    content:"";position:absolute;left:0;right:0;top:5px;border-top:2px solid #777;
+  }
+  .closet-door-label{
+    position:absolute;bottom:23px;left:50%;transform:translateX(-50%);
+    white-space:nowrap;font-size:13px;font-weight:700;
   }
   .entry-door{
     position:absolute; left:-1px; top:0.5%; width:9%; height:18%; border-left:0;
@@ -125,7 +130,7 @@
     </div>
 
     <div class="entry-door fixed"><div class="door-swing"></div></div>
-    <div class="closet fixed"></div>
+    <div class="closet-door" role="img" aria-label="Door in north wall to closet outside the office"><span class="closet-door-label">↑ Closet (outside room)</span></div>
 
     <div class="piece display locked" data-id="display-98" data-name='98" Display' data-locked="1"
          style="left:.7%;top:32%;width:2.8%;height:35%;writing-mode:vertical-rl;">98" Display</div>
@@ -170,7 +175,8 @@
     <b>How to use:</b>
     Drag any movable item to test layouts. Select an item and rotate it in 15° steps.
     The <b>cabinet and 85" display move and rotate together</b>. The L-shaped desk moves as one piece.
-    The <b>98" display, entry door and closet stay fixed</b>.
+    The <b>98" display and doors stay fixed</b>.
+    The closet is beyond the north wall and takes up no office floor space.
     The conversation table is shown at approximately <b>42"</b>, slightly larger than the prior sketch.
   </div>
 </div>
