@@ -87,11 +87,13 @@
   .conference-chair{background:#d9d9d9;color:#333;border-radius:22px}
   .cabinet-group.piece,.desk.piece{border:0;background:none;box-shadow:none}
   .cabinet-display{position:absolute;left:35.94%;top:8.89%;width:28.125%;height:21.11%;display:flex;align-items:center;justify-content:center;border:2px solid #2e2e2e}
-  .desk{font-weight:700;clip-path:polygon(0 0,54.545% 0,54.545% 72%,100% 72%,100% 100%,0 100%)}
+  .desk{font-weight:700;color:#fff4db;clip-path:polygon(0 0,39.56% 0,39.56% 72.73%,100% 72.73%,100% 100%,0 100%)}
   .desk svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-  .desk .desk-label{position:absolute;left:0;top:6%;width:54.545%;pointer-events:none}
-  .desk.selected svg polygon{stroke:var(--accent);stroke-width:5}
-  .desk.dragging svg polygon{stroke:var(--accent)}
+  .desk .desk-label{position:absolute;left:2%;top:5%;width:35.56%;font-size:clamp(8px,1.05vw,14px);pointer-events:none}
+  .desk .desk-label small{display:block;margin-top:5px;font-size:.8em;font-weight:400}
+  .desk .return-label{position:absolute;left:41%;bottom:8%;width:56%;font-size:clamp(8px,1vw,13px);pointer-events:none}
+  .desk.selected svg .desk-outline{stroke:var(--accent);stroke-width:5}
+  .desk.dragging svg .desk-outline{stroke:var(--accent)}
   .display{background:#1b1f24;color:#fff;font-weight:700;border-radius:3px}
   .monitor{background:#2e3440;color:#fff;border-radius:50%/12%;font-size:11px}
   .printer{background:#ddd;border-radius:6px;font-size:11px}
@@ -146,13 +148,26 @@
     <div class="piece conference-chair" data-id="conference-chair-5" data-name="Conference Chair" style="left:40%;top:71%;width:6%;height:9%;"></div>
     <div class="piece conference-chair" data-id="conference-chair-6" data-name="Conference Chair" style="left:50%;top:71%;width:6%;height:9%;"></div>
 
-    <div class="piece desk" data-id="executive-desk" data-name="L-shaped Executive Desk"
-         style="left:73%;top:31%;width:22%;height:43%;">
-      <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-        <polygon points="0,0 54.545,0 54.545,72 100,72 100,100 0,100"
-                 fill="var(--desk)" stroke="#2e2e2e" stroke-width="2" vector-effect="non-scaling-stroke" />
+    <!-- Photo reference: 110 x 91 inches overall. Main top and return depths are approximate.
+         Desk is oriented with its 110-inch main span north/south in the 31 x 17-foot room. -->
+    <div class="piece desk" data-id="executive-desk" data-name='Sculpted Walnut Desk + Side Cabinet — 110″ × 91″'
+         style="left:73%;top:25%;width:24.4624%;height:53.9216%;">
+      <svg viewBox="0 0 91 110" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="walnut" x2="1" y2="0">
+            <stop stop-color="#29221e"/><stop offset=".45" stop-color="#604a37"/><stop offset="1" stop-color="#342a23"/>
+          </linearGradient>
+          <pattern id="woodgrain" width="8" height="14" patternUnits="userSpaceOnUse">
+            <path d="M0 0L8 7L0 14" fill="none" stroke="#b08a5b" stroke-opacity=".2" stroke-width=".6"/>
+          </pattern>
+        </defs>
+        <path class="desk-outline" d="M1 1H35V81H90V109H1Z" fill="url(#walnut)" stroke="#b49a6d" stroke-width="2" vector-effect="non-scaling-stroke"/>
+        <path d="M3 3H33V83H88V107H3Z" fill="url(#woodgrain)"/>
+        <path d="M5 4V106H87M36 84H87" fill="none" stroke="#d3bb88" stroke-width="1"/>
+        <path d="M54 85V106M72 85V106" fill="none" stroke="#1d1916" stroke-width="1"/>
       </svg>
-      <span class="desk-label">Executive Desk</span>
+      <span class="desk-label">Walnut Desk<small>110″ × 91″ overall</small></span>
+      <span class="return-label">Side Cabinet</span>
     </div>
     <div class="piece monitor" data-id="monitor-49" data-name='49" Ultrawide Monitor'
          style="left:77%;top:38%;width:4%;height:28%;">49"</div>
@@ -174,7 +189,7 @@
   <div class="legend">
     <b>How to use:</b>
     Drag any movable item to test layouts. Select an item and rotate it in 15° steps.
-    The <b>cabinet and 85" display move and rotate together</b>. The L-shaped desk moves as one piece.
+    The <b>cabinet and 85" display move and rotate together</b>. The walnut desk and side cabinet move as one piece. Its overall footprint is <b>110″ × 91″</b> from the reference photo; the desktop and cabinet depths are approximate.
     The <b>98" display and doors stay fixed</b>.
     The closet is beyond the north wall and takes up no office floor space.
     The conversation table is shown at approximately <b>42"</b>, slightly larger than the prior sketch.
