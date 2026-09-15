@@ -87,11 +87,11 @@
   .conference-chair{background:#d9d9d9;color:#333;border-radius:22px}
   .cabinet-group.piece,.desk.piece{border:0;background:none;box-shadow:none}
   .cabinet-display{position:absolute;left:35.94%;top:8.89%;width:28.125%;height:21.11%;display:flex;align-items:center;justify-content:center;border:2px solid #2e2e2e}
-  .desk{font-weight:700;color:#fff4db;clip-path:polygon(0 0,39.56% 0,39.56% 72.73%,100% 72.73%,100% 100%,0 100%)}
+  .desk{font-weight:700;color:#fff4db;clip-path:polygon(0 0,48% 0,48% 75.455%,100% 75.455%,100% 100%,0 100%)}
   .desk svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-  .desk .desk-label{position:absolute;left:2%;top:5%;width:35.56%;font-size:clamp(8px,1.05vw,14px);pointer-events:none}
+  .desk .desk-label{position:absolute;left:6%;top:7%;width:34%;font-size:clamp(8px,1.05vw,14px);pointer-events:none}
   .desk .desk-label small{display:block;margin-top:5px;font-size:.8em;font-weight:400}
-  .desk .return-label{position:absolute;left:41%;bottom:8%;width:56%;font-size:clamp(8px,1vw,13px);pointer-events:none}
+  .desk .return-label{position:absolute;left:50%;bottom:8%;width:48%;font-size:clamp(8px,1vw,13px);pointer-events:none}
   .desk.selected svg .desk-outline{stroke:var(--accent);stroke-width:5}
   .desk.dragging svg .desk-outline{stroke:var(--accent)}
   .display{background:#1b1f24;color:#fff;font-weight:700;border-radius:3px}
@@ -148,26 +148,33 @@
     <div class="piece conference-chair" data-id="conference-chair-5" data-name="Conference Chair" style="left:40%;top:71%;width:6%;height:9%;"></div>
     <div class="piece conference-chair" data-id="conference-chair-6" data-name="Conference Chair" style="left:50%;top:71%;width:6%;height:9%;"></div>
 
-    <!-- Photo reference: 110 x 91 inches overall. Main top and return depths are approximate.
-         Desk is oriented with its 110-inch main span north/south in the 31 x 17-foot room. -->
-    <div class="piece desk" data-id="executive-desk" data-name='Sculpted Walnut Desk + Side Cabinet — 110″ × 91″'
+    <!-- Plan approximation from Zimasya LBZ-2376 product photos and dimension illustration.
+         https://www.zimasya.com/products/luxury-executive-desk-with-led-lighting-and-sculpted-front-panel
+         No full overhead drawing or component depths are supplied. Overall 110 x 91 inches
+         is published; rounded top, pedestal and lower return proportions are inferred. -->
+    <div class="piece desk" data-id="executive-desk" data-name='Walnut Desk + Lower Side Cabinet — 110″ × 91″ (approximate plan)'
          style="left:73%;top:25%;width:24.4624%;height:53.9216%;">
       <svg viewBox="0 0 91 110" preserveAspectRatio="none" aria-hidden="true">
         <defs>
           <linearGradient id="walnut" x2="1" y2="0">
-            <stop stop-color="#29221e"/><stop offset=".45" stop-color="#604a37"/><stop offset="1" stop-color="#342a23"/>
+            <stop stop-color="#483527"/><stop offset=".5" stop-color="#785a40"/><stop offset="1" stop-color="#493829"/>
           </linearGradient>
-          <pattern id="woodgrain" width="8" height="14" patternUnits="userSpaceOnUse">
-            <path d="M0 0L8 7L0 14" fill="none" stroke="#b08a5b" stroke-opacity=".2" stroke-width=".6"/>
+          <pattern id="woodgrain" width="5" height="12" patternUnits="userSpaceOnUse">
+            <path d="M1 0Q3 6 1 12M4 0Q2 6 4 12" fill="none" stroke="#c49a66" stroke-opacity=".14" stroke-width=".35"/>
           </pattern>
         </defs>
-        <path class="desk-outline" d="M1 1H35V81H90V109H1Z" fill="url(#walnut)" stroke="#b49a6d" stroke-width="2" vector-effect="non-scaling-stroke"/>
-        <path d="M3 3H33V83H88V107H3Z" fill="url(#woodgrain)"/>
-        <path d="M5 4V106H87M36 84H87" fill="none" stroke="#d3bb88" stroke-width="1"/>
-        <path d="M54 85V106M72 85V106" fill="none" stroke="#1d1916" stroke-width="1"/>
+        <!-- Lower storage projects behind the desktop, leaving the chair bay open. -->
+        <rect class="desk-outline" x="1" y="83" width="89" height="26" rx="2" fill="#392c23" stroke="#b49a6d" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+        <path d="M45 86H87V106H45M64 86V106" fill="none" stroke="#82664b" stroke-width=".7"/>
+        <rect class="desk-outline" x="1" y="1" width="40" height="24" rx="2" fill="#392c23" stroke="#b49a6d" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+        <!-- Independent raised desktop with eased ends and a subtly bowed front. -->
+        <path class="desk-outline" d="M7 3Q3 3 3 8Q0 55 3 102Q3 106 7 106H37Q42 106 42 101V8Q42 3 37 3Z" fill="url(#walnut)" stroke="#c2a574" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+        <path d="M7 5Q4 55 7 104H37V5Z" fill="url(#woodgrain)"/>
+        <rect x="11" y="35" width="24" height="38" rx="1.5" fill="#262422" stroke="#675743" stroke-width=".6"/>
+        <rect x="6" y="47" width="3" height="12" rx=".6" fill="#191b1c" stroke="#968266" stroke-width=".4"/>
       </svg>
       <span class="desk-label">Walnut Desk<small>110″ × 91″ overall</small></span>
-      <span class="return-label">Side Cabinet</span>
+      <span class="return-label">Lower<br>Side Cabinet</span>
     </div>
     <div class="piece monitor" data-id="monitor-49" data-name='49" Ultrawide Monitor'
          style="left:77%;top:38%;width:4%;height:28%;">49"</div>
@@ -189,7 +196,7 @@
   <div class="legend">
     <b>How to use:</b>
     Drag any movable item to test layouts. Select an item and rotate it in 15° steps.
-    The <b>cabinet and 85" display move and rotate together</b>. The walnut desk and side cabinet move as one piece. Its overall footprint is <b>110″ × 91″</b> from the reference photo; the desktop and cabinet depths are approximate.
+    The <b>cabinet and 85" display move and rotate together</b>. The walnut desk and side cabinet move as one piece. Its overall footprint is <b>110″ × 91″</b> from the manufacturer. The top-down shape is inferred from product photos, with a rounded desktop over a lower side cabinet; component depths remain approximate. <a href="https://www.zimasya.com/products/luxury-executive-desk-with-led-lighting-and-sculpted-front-panel" target="_blank" rel="noopener noreferrer">Desk reference</a>.
     The <b>98" display and doors stay fixed</b>.
     The closet is beyond the north wall and takes up no office floor space.
     The conversation table is shown at approximately <b>42"</b>, slightly larger than the prior sketch.
