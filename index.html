@@ -25,7 +25,7 @@
   .wrap{padding:44px 14px 14px}
   #room{
     position:relative;margin:auto;background:white;border:18px solid var(--wall);
-    width:min(96vw,1550px);aspect-ratio:31/17;overflow:visible;
+    box-sizing:content-box;width:min(calc(100vw - 64px),1514px);aspect-ratio:31/17;overflow:visible;
     box-shadow:0 4px 24px rgba(0,0,0,.15);
   }
   .label{position:absolute;font-weight:700;font-size:14px;pointer-events:none}
@@ -138,15 +138,15 @@
          style="left:.7%;top:32%;width:2.8%;height:35%;writing-mode:vertical-rl;">98" Display</div>
 
     <div class="piece table" data-id="conference-table" data-name="8' × 4' Conference Table"
-         style="left:27%;top:42%;width:34%;height:28%;">8' × 4'<br>Conference Table</div>
+         style="left:15.2%;top:44%;width:25.8064516%;height:23.5294118%;transform:rotate(90deg);">8' × 4'<br>Conference Table</div>
 
     <!-- conference chairs -->
-    <div class="piece conference-chair" data-id="conference-chair-1" data-name="Conference Chair" style="left:30%;top:32%;width:6%;height:9%;"></div>
-    <div class="piece conference-chair" data-id="conference-chair-2" data-name="Conference Chair" style="left:40%;top:32%;width:6%;height:9%;"></div>
-    <div class="piece conference-chair" data-id="conference-chair-3" data-name="Conference Chair" style="left:50%;top:32%;width:6%;height:9%;"></div>
-    <div class="piece conference-chair" data-id="conference-chair-4" data-name="Conference Chair" style="left:30%;top:71%;width:6%;height:9%;"></div>
-    <div class="piece conference-chair" data-id="conference-chair-5" data-name="Conference Chair" style="left:40%;top:71%;width:6%;height:9%;"></div>
-    <div class="piece conference-chair" data-id="conference-chair-6" data-name="Conference Chair" style="left:50%;top:71%;width:6%;height:9%;"></div>
+    <div class="piece conference-chair" data-id="conference-chair-1" data-name="Conference Chair" style="left:25%;top:21%;width:6%;height:9%;"></div>
+    <div class="piece conference-chair" data-id="conference-chair-2" data-name="Conference Chair" style="left:14%;top:43%;width:6%;height:9%;"></div>
+    <div class="piece conference-chair" data-id="conference-chair-3" data-name="Conference Chair" style="left:38%;top:43%;width:6%;height:9%;"></div>
+    <div class="piece conference-chair" data-id="conference-chair-4" data-name="Conference Chair" style="left:14%;top:61%;width:6%;height:9%;"></div>
+    <div class="piece conference-chair" data-id="conference-chair-5" data-name="Conference Chair" style="left:38%;top:61%;width:6%;height:9%;"></div>
+    <div class="piece conference-chair" data-id="conference-chair-6" data-name="Conference Chair" style="left:25%;top:81%;width:6%;height:9%;"></div>
 
     <!-- Plan approximation from Zimasya LBZ-2376 product photos and dimension illustration.
          https://www.zimasya.com/products/luxury-executive-desk-with-led-lighting-and-sculpted-front-panel
@@ -186,11 +186,11 @@
 
     <!-- Four-seat conversation area, 42" round table -->
     <div class="piece round-table" data-id="conversation-table" data-name='42" Round Conversation Table'
-         style="left:63.5%;top:73%;width:5.6%;height:10.2%;">42"</div>
-    <div class="piece chair" data-id="lounge-chair-1" data-name="Lounge Chair" style="left:59.5%;top:68%;width:5%;height:8%;transform:rotate(45deg);"></div>
-    <div class="piece chair" data-id="lounge-chair-2" data-name="Lounge Chair" style="left:69%;top:68%;width:5%;height:8%;transform:rotate(-45deg);"></div>
-    <div class="piece chair" data-id="lounge-chair-3" data-name="Lounge Chair" style="left:59.5%;top:82%;width:5%;height:8%;transform:rotate(135deg);"></div>
-    <div class="piece chair" data-id="lounge-chair-4" data-name="Lounge Chair" style="left:69%;top:82%;width:5%;height:8%;transform:rotate(-135deg);"></div>
+         style="left:53%;top:74%;width:11.2903226%;height:20.5882353%;">42"</div>
+    <div class="piece chair" data-id="lounge-chair-1" data-name="Lounge Chair" style="left:47%;top:70%;width:5%;height:8%;transform:rotate(45deg);"></div>
+    <div class="piece chair" data-id="lounge-chair-2" data-name="Lounge Chair" style="left:66%;top:70%;width:5%;height:8%;transform:rotate(-45deg);"></div>
+    <div class="piece chair" data-id="lounge-chair-3" data-name="Lounge Chair" style="left:47%;top:90%;width:5%;height:8%;transform:rotate(135deg);"></div>
+    <div class="piece chair" data-id="lounge-chair-4" data-name="Lounge Chair" style="left:66%;top:90%;width:5%;height:8%;transform:rotate(-135deg);"></div>
   </div>
 
   <div class="legend">
@@ -199,7 +199,7 @@
     The <b>cabinet and 85" display move and rotate together</b>. The walnut desk and side cabinet move as one piece. Its overall footprint is <b>110″ × 91″</b> from the manufacturer. The top-down shape is inferred from product photos, with a rounded desktop over a lower side cabinet; component depths remain approximate. <a href="https://www.zimasya.com/products/luxury-executive-desk-with-led-lighting-and-sculpted-front-panel" target="_blank" rel="noopener noreferrer">Desk reference</a>.
     The <b>98" display and doors stay fixed</b>.
     The closet is beyond the north wall and takes up no office floor space.
-    The conversation table is shown at approximately <b>42"</b>, slightly larger than the prior sketch.
+    Scale: <b>31′ × 17′ inside the walls</b>. Conference table: <b>8′ × 4′</b>; round table: <b>42″ diameter</b>. Cabinet depth is an unconfirmed <b>36.7″ estimate</b>. Chairs, screens, printer and doors are schematic; verify their actual dimensions before judging clearances.
   </div>
 </div>
 
